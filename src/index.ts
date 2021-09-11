@@ -14,7 +14,7 @@ app.use("/buy", purchaseRouter)
 app.use("/stock", stockRouter)
 
 
-  const PORT = process.env.PORT || 3000;
+  const PORT = process.env.PORT || 3010;
 app.listen(PORT, () => {
     console.log(`App is running on port ${ PORT }`);
 });
