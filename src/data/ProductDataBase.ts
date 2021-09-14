@@ -11,6 +11,13 @@ export class ProdutcDataBase extends BaseDatabase{
     return this.getConnection().select("*").where({ id }).from(ProdutcDataBase.TABLE_NAME);
   }
 
+  async VerifyStock(input: string | productInputDTO) {
+    console.log(input)
+    return this.getConnection()
+    .select("*")
+    .from(ProdutcDataBase.TABLE_NAME);
+  }
+
 
   public async getProducts(): Promise<productOutputDTO[]>{
     const product = await this.getConnection()

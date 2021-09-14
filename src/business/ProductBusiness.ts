@@ -1,5 +1,5 @@
 import { ProdutcDataBase } from "../data/ProductDataBase";
-import { productOutpuDBtDTO, productOutputDTO } from "../model/Product";
+import {  productOutputDTO } from "../model/Product";
 
 export class ProductBusiness{
     

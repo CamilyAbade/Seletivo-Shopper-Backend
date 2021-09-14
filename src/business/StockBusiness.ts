@@ -19,6 +19,13 @@ export class StockBusiness{
         throw new Error("Invalid id");
         }
 
+        const queryStock = await productDataBase.VerifyStock(input)
+        if (!queryStock[0]) {
+        throw new Error("Invalid qty");
+        }
+
+
+
         await this.stockDataBase.changeStock(input)
 
     }
