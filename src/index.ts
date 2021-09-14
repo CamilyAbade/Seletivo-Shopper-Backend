@@ -1,5 +1,4 @@
 import dotenv from "dotenv";
-import {AddressInfo} from "net";
 import express from "express";
 import { productRouter } from "./routes/productRouter";
 import { purchaseRouter } from "./routes/purchaseRouter";
@@ -15,7 +14,7 @@ app.use(cors())
 app.use(express.json());
 
 app.use("/list", productRouter)
-app.use("/buy", purchaseRouter)
+app.use("/purchase", purchaseRouter)
 app.use("/stock", stockRouter)
 
 const PORT = process.env.PORT || 3010;

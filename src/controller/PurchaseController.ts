@@ -23,7 +23,7 @@ export class PurchaseController{
             new IdGenerator
         )  
         await purchaseBusiness.registerPurchase(input)
-        res.sendStatus(200)
+        res.status(200).send('Compra criada com sucesso!')
         }
 
         catch(error){

@@ -1,4 +1,6 @@
 import moment from "moment";
+import { ProductController } from "../controller/productController";
+import { ProdutcDataBase } from "../data/ProductDataBase";
 import { PurchaseDataBase } from "../data/PurchaseDataBase";
 import { InvalidInputError } from "../error/InvalidInput";
 import { Purchase, purchaseInputDTO, purchaseOutputDTO } from "../model/purchase";

@@ -56,6 +56,7 @@ export interface purchaseOutputDTO{
 }
 
 export interface purchaseInputDTO{
+    id?: string,
     name: string,
     date: string,
     list: JSON

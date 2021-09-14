@@ -1,13 +1,13 @@
 export class Product{
     constructor(
-        private id: number,
+        private id: string,
         private name: string,
         private price: string,
         private qty_stock: string
     ){}
 
 
-    public getId(): number {
+    public getId(): string {
         return this.id
     }
 
@@ -47,13 +47,13 @@ export class Product{
 }
 
 export interface productInputDTO{
-    id: number,
+    id: string,
     qty_stock: number
 }
 
 export interface productOutputDTO{
-    id: number,
     name: string,
     price: string,
     qty_stock: number
 }
+

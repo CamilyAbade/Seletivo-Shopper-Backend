@@ -1,5 +1,5 @@
 import { ProdutcDataBase } from "../data/ProductDataBase";
-import { productOutputDTO } from "../model/Product";
+import { productOutpuDBtDTO, productOutputDTO } from "../model/Product";
 
 export class ProductBusiness{
     
@@ -10,4 +10,6 @@ export class ProductBusiness{
     async getProducts(): Promise<productOutputDTO[]>{
         return this.productDataBase.getProducts()
     }
+
+
 }

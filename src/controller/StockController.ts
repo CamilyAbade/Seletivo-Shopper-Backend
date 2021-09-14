@@ -17,7 +17,7 @@ export class StockController{
             new StockDataBase,
         )  
         await stockBusiness.changeStock(input)
-        res.sendStatus(200)
+        res.status(200).send('Banco alterado com sucesso!')
 
         }
         catch(error){

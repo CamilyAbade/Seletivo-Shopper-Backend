@@ -1,3 +1,4 @@
+import { ProdutcDataBase } from "../data/ProductDataBase";
 import { StockDataBase } from "../data/StockDataBase";
 import { InvalidInputError } from "../error/InvalidInput";
 import { productInputDTO } from "../model/Product";
@@ -12,11 +13,13 @@ export class StockBusiness{
             throw new InvalidInputError("Invalid input to change stock")
         }
         
+        const productDataBase = new ProdutcDataBase()
+        const queryId = await productDataBase.VerifyId(input.id)
+        if (!queryId[0]) {
+        throw new Error("Invalid id");
+        }
+
         await this.stockDataBase.changeStock(input)
-
-
-
-
 
     }
         
